@@ -1,2 +1,6 @@
 markdown: rdiscount
 pygments: true
+
+rdiscount:
+    extensions: [smart]
+
