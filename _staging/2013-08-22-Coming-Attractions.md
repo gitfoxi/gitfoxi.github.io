@@ -325,6 +325,10 @@ Hill Road. Maybe I should.
 
 ## Category: hp93k System -- How it Works
 
+### Dumpster diving in /opt/hp9300/soc
+
+You can learn a lot about how SmarTest works by combing it's file tree.
+
 ### Layers: Firmware Commands
 
 "Firmware Commands" don't really let you talk to the firmware, but they do
@@ -686,3 +690,50 @@ Say you've just purchased a SmarTest license and you're waiting for them to
 mail it to you (seriously, haven't you heard of email?). You're schedule won't
 let you sit on your hands however long it takes a box with a certificate to
 arrive from Singapore. Is there any way to start working now? There is.
+
+## Category: Bug Reports
+
+In which I submit unsolicited but reports to the Advantest SmarTest team
+
+### Continuity logs only one pin name
+
+In 6.5.4 the binary datalog lists the first pin name in a continuity test for
+all of the pin names.
+
+### MAPI defines a lot of common units
+
+If you try to name a variable like
+
+    int V;
+    V = 7;
+
+you're gonna have a bad time. This is thanks to a bunch of units defined in
+`MapiUnit.h" looking like:
+
+    #define    nV        *1.000000e-09
+    #define    uV        *1.000000e-06
+    #define    mV        *1.000000e-03
+    #define    V
+    #define    KV        *1.000000e+03
+    #define    MV        *1.000000e+06
+    #define    GV        *1.000000e+09
+
+I can't tell you how many times I've wanted to name a variable `Kohm`, `dBm`,
+`msec` or `Vpp` (they even stole `CODE`) and been confronted with some crazy,
+impossible to debug compiler errors.
+
+Being able to add units to your code flexibly is a cool, almost-magical
+feature. But in this case the price is too high. Guys, you've broken the
+cardinal rule against poluting, the global namespace.
+
+This would be quite convenient if it wasn't biting me in the ass every time I
+try to use a 1-4 letter variable name. Perhaps an indictment of C++. But C++
+does have namespaces so this is just gratuitous. Would it be so terrible to
+type `100 TM::uV` instead of `100 uV`?
+
+## Using NIXos to create a stable platform with a future
+
+Also, an amazing new way to distribute test programs to offshore.
+
+## Python, Lua, LuaJIT, Golang, SWIG -- Installing and Wrapping
+
