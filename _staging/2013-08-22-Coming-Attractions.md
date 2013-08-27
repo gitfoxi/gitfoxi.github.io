@@ -499,7 +499,12 @@ Modern PCIe IP is a good example of an interface with a built-in tester.
 
 ## Category: hp93k Skills
 
-### It's Hard to Parse STIL and WGL (But You Can Do It!)
+### It's Hard to Parse STIL (But You Can Do It!)
+
+### It's Hard to Parse WGL (But You Can Try!)
+
+In which I post an unofficial spec for WGL. And ask if anyone can find a copy
+of the official one?
 
 ### Understanding STIL
 
