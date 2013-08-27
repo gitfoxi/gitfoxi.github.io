@@ -742,3 +742,10 @@ Also, an amazing new way to distribute test programs to offshore.
 
 ## Python, Lua, LuaJIT, Golang, SWIG -- Installing and Wrapping
 
+## SVF -- Serial Vector Format
+
+Serial vectors are a great idea. If your designers implement them right then
+you can colapse functional testing and focus on a simple interface. If you know
+a bit about yoru interface you can create powerful functional vectors without
+bothering to simulate. SVF was designed as an industry-standard interchange
+format for serial vectors. There's also a Xilinx variant that's worth a look.

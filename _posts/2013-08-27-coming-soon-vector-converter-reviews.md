@@ -35,6 +35,7 @@ On your behalf, dear reader, I will request an evaluation license for:
 * Verifier - Simutest
 * VectorPro / VectorPort - Test Spectrum
 * Test Development Series (TDS) - Test Systems Strategies (TSSI)
+* VelocityCAE - AllianceATE
 
 ## Criteria
 
@@ -197,6 +198,26 @@ And yet, if there was one company that you'd hope could convert WGL files to
 use on the hp93k, TSSI is that company, so I'll have to swallow my rage and
 give them a try.
 
+### VelocityCAE
+
+[VelocityCAE](http://www.velocitycae.com/) from AllianceATE is one that I
+almost missed. Their search engine optimization is terrible. I couldn't find
+them on Google at all. I just remembered that years ago, when I was working at
+Agilent, these guys had a cubicle and they were supposedly working on a Python
+vector converter.
+
+Luckily the name AllianceATE is somewhat catchy and I happened to remember it.
+A visit to their website shows that they do indeed have a commercial vector
+converter.
+
+The VelocityCAE website isn't quite as good as VTRAN's, but it's easily the
+second best in the group. They've posted screenshots (GUI, yuck) and their
+[User's Guide](http://www.velocitycae.com/docmanager/files/VelocityReference.pdf)
+is online. So that's encouraging. I know the guys who made it are consultants
+focusing on 93k, so that, plus the Python thing plus the name Ken Meade (which
+I've heard uttered by the Verigy consultants in a hushed, respectful tone)
+makes me feel pretty optimistic about this one.
+
 ## Suggestions?
 
 So that's my plan. It's called **Vector Converter Reviews 2013** so I have
@@ -206,3 +227,5 @@ I'll be posting updates as I go.
 Meanwhile if there's a vector converter, or other hp93k-related tool that
 you're curious about or that you want to tell me about, or if **you** want to
 join the fun and write some reviews, let me know in the comments.
+
+**Update: Added VelocityCAE**
