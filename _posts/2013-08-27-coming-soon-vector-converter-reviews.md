@@ -214,7 +214,7 @@ The VelocityCAE website isn't quite as good as VTRAN's, but it's easily the
 second best in the group. They've posted screenshots (GUI, yuck) and their
 [User's Guide](http://www.velocitycae.com/docmanager/files/VelocityReference.pdf)
 is online. So that's encouraging. I know the guys who made it are consultants
-focusing on 93k, so that, plus the Python thing plus the name Ken Meade (which
+focusing on 93k, so that, plus the Python thing plus the names Bill Wymbs and Ken Meade (which
 I've heard uttered by the Verigy consultants in a hushed, respectful tone)
 makes me feel pretty optimistic about this one.
 

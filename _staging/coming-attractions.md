@@ -5,6 +5,16 @@ title: Coming Attractions
 
 # Coming Attractions
 
+Congradulations, you dug deep and found that my list of potential blogging
+topics is on the internet. Forgive the hasty, outline -- this material is not
+ready for prime time.
+
+Let me know what you think.
+
+Let me know if you'd like to contribute to a post.
+
+And if you have any suggestions ... let me know.
+
 So, I've got this [new weblog](/index.html) and I aim to fill it with
 interesting stuff about hp93k. Here's some ideas for future posts.
 
@@ -13,6 +23,8 @@ there's something you'd like to read about soon, or suggest new ideas in the
 comments.
 
 If you'd like to write a post, submissions are welcome!
+
+-- TODO: Port this document to vimwiki / Gollum
 
 ## Category: hp93k Test Engineering
 
@@ -40,7 +52,7 @@ hp93k implements vectors and timing.
 * Memory Savings
 * Compression
 * Vector Editing
-* Protocol Dumping
+* Protocol Analysis
 
 ### v2b, ait, aiv -- Can Run on Any Linux
 
@@ -101,6 +113,70 @@ Only Pinscale and newer testers support Level Set 0. Perhaps someone would
 prefer that you retire your old C400?
 
 ## Category: hp93k Community
+
+### How Many Test Engineers Working with hp93k?
+
+Estimate the number of test engineers in the bay area and world wide.
+
+Quick estimate: I heard from some Verigy salesman that they had delivered aboug
+3000 pinscale machines worldwide. Mutliply that by an optimistic 10 Test
+Engineers per tester and you get:
+
+**30,000 hp93k Test Engineers worldwide**
+
+Maybe more if you're willing to include
+hp83000, the new SmartScale and the installed base of C400, P600 and P1000.
+
+In the bay area, installed hp93k testers are guestimated at:
+
+* 10 at ISE Labs
+* 5 at STS
+* 5 at EAG
+* 3 at globaltest
+* 10 at nVidia
+* 2 at Xilinx
+* 3 at Broadcomm
+* 2 at Advantest HQ
+
+And maybe apply of multiplier of 3 for those unknown to me. Multiplying by 10
+Test Engineers per tester, this yields an estimate of:
+
+**1200 hp93k Test Engineers in the Bay Area, 4% of the total community**
+
+That number seems a bit high. I'll have to think about how I'm over estimating
+and maybe do an estimate based on job postings and resumes, Voice attendence or
+GoSemi subscriptions.
+
+There's a rule called the [90-9-1 principle](http://en.wikipedia.org/wiki/1%_rule_(Internet_culture)
+which posits that for Internet content there's
+
+* 1 person actively creating new content
+* 9 people that edit, modify and repost the content
+* 90 people who passively view it
+
+The upshot is that only 1% of people interested enough in a topic to go look it
+up on the internet will contribe to the community knowledge base.
+
+But this fails to account for the dullards who aren't even paying attention. It
+sounds like a good question for Quora and while I'm waiting for answers I'll
+estimate that 20% are even bothering to occasionally google "hp93k blog"
+
+The bottom line is that you'd expect to see:
+
+* Actively blogging and organizing -- 0.2% -- 60 people worldwide, and just 2-3 in the bay area
+* Showing up and contributing something -- 540 people worldwide and 22 in the bay area
+* At least occasionally benefiting from low-hanging fruit -- 5400 worldwide and 220 in the bay area
+
+Hey, that's not as bad as I thought. That means that I can potentially reach an
+audience of 5400, while recieving comments from 540 individuals. Given the rate
+at which I cotton to people I can expect to make upwards of 5 friends worldwide
+and as many as 1 here in meatspace.
+
+A successful hp93k test engineer's meetup could attract as many as 25 people:
+Enough to fill a large conference room or a small bar.
+
+**In conclusion: I'm encouraged!**
+
 
 ### Building a Community of hp93k Test Engineers
 
@@ -295,7 +371,22 @@ letter to the ASE group.
 
 ### It's Hard to Sell Testers
 
-### It's Hard to Run an Off Shore Production Facility
+My heart goes out to Advantest. After aquiring Verigy they're now in hawk to
+the tune of $1 billion and they own the two top semicondutor ATE platforms in
+the business.
+
+This gives them a bit of market power. But don't get too jeleous. Advantest
+still has to compete with Teradyne and LTX/Credence. Both Teradyne and
+LTX/Credence are happy to compete on price. Advantest can hardly afford to play
+the price game with their high cost structure necessitated by maintaining two,
+basically-equivalent, platforms, all while selling into a marketplace where
+they are more likely to canabalize their own sales with any new offering than
+they are to take anything away from the competition.
+
+### It's Hard to Run an Off Shore Assembly and Test House
+
+Why put Assemby and Test under the same roof anyway? Is it just to save postage
+or is it more about saving face?
 
 ### It's Hard to Run an Independent Lab
 
@@ -388,6 +479,15 @@ The hp93k is basically:
 With a little elbow grease you could make your own. That could lead to a fun
 series of articles. But I probably want to get a group together and maybe some
 funding before I do that.
+
+Ideas:
+* Infinite edge placement using time stamps
+* timing/levels inheritable, clone-able
+* simple text-based interface with GUI for waveform/shmoo only
+* 1/10th the cost -- inexpensive enough that you will buy a tester per product
+* NixOS
+* Move hardware to loadboard -- vertically integrated loadboard and tester manufacturer
+* Open source all platform software -- let test engineers fix problems.
 
 
 ## Category: hp93k Open-Source Advocacy
@@ -712,7 +812,7 @@ If you try to name a variable like
     int V;
     V = 7;
 
-you're gonna have a bad time. This is thanks to a bunch of units defined in
+yRights and restrictions on the use, transfer, and copying of Advantest Software are set forth in Advantest (Singapore) Pte. Ltd. Redeemable Software License agreement.ou're gonna have a bad time. This is thanks to a bunch of units defined in
 `MapiUnit.h" looking like:
 
     #define    nV        *1.000000e-09
@@ -749,3 +849,661 @@ you can colapse functional testing and focus on a simple interface. If you know
 a bit about yoru interface you can create powerful functional vectors without
 bothering to simulate. SVF was designed as an industry-standard interchange
 format for serial vectors. There's also a Xilinx variant that's worth a look.
+
+## Protip: If you're thinking of changing a group definition, don't
+
+This can screw you in a number of ways. You may have forgotten how the group
+was used in timing or levels. You may have forgotten how an equation-based
+group is based on the group that you're changing. The ASCII tools may have
+helpfully used a group definition for you in some convenient but utterly
+inappropraite way. Easier to just make a new group.
+
+## Quick Script: dfgp-be-gone.py
+
+Get rid of troublesome groupings. Flatten groups used in timing, levels and
+testmethods. Adds comments to remind you what groups were previously used and
+what pins they contained at the time. Add to Antikc repo.
+
+## BYOTE: Build your own Test Engineer
+
+Develop a wiki/youtube course for interns and recent college graduates. Create
+an industry partnership with Advantest, independant labs, employers large and
+small to pair mentors with noobies for 1-2 months.
+
+Advantest contributes a SmarTest license for life to each new TE. Gains a new
+engineer supporting their platform.
+
+Companies contribute a paid internship and test time (if they have testers) and
+get access to the network of mentors and new TEs for hire.
+
+Mentors contribute mentorship and wiki content. They get access to the network
+of menthors and new TEs for career advancement.
+
+## Tip Line (Rage against the NDA)
+
+What's your salary? Stock options? Are you looking for a better offer? What did
+you pay for a loadboard? Test time?  Probe card? Wafer sorter? Vector
+converter? And to whom? Know of an open req? Ever bought a tester? I'd be
+fascinated to learn the terms? Got an axe to grind? There's a spinning wheel
+bellow, perfect for grinding axes. Share as many or as few details as you want.
+Lie, defame. I don't care.  Are you a vendor and want to tip what your charge
+for goods and services. Do it and you'll get a link. Your tip my be featured in
+a future post.
+
+Post anonymously (or nonymously) the dollars and cents of the industry.
+
+Tips on posting anonymously:
+
+* Use private browsing mode
+* Don't post from your work computer (or any computer on your work network)
+* Post using your phone from starbucks
+* If you must post at work, use your phone and make sure wifi is off
+* Create an internet avatar if you want to speak semi-nonymously (but be sure
+  to cover your tracks. Don't sign up for your fake e-mail account using your
+  real e-mail account)
+* Use Guerilla Mail.
+* If you want me to know your identity but not the internet, send me an email
+  with the subject "KEEP ME OUT OF THIS". I'll qutoe you as "someone I trust
+  but who shall remain nameless."
+
+Feel bad about giving the finger to proprietary, NDA bullshit? Don't. Markets
+run on information. Take a stand for free speech and free markets! You're doing
+God's work!
+
+One thing I will guarantee: No anymous tips are coming from me. I'm just giving
+you a space to be heard. If I want to say something I will say it nonymously. -
+Michael Fox, Test Engineer
+
+## Ask a Probe Card Vendor
+
+Try Luis at Probe Logic. Contact SV probe too. XY coordinates, pad material
+(lead-free or leaded, gold, copper or tin), pad size, probing temperature. 
+
+Ask about pricing formulas.
+
+## How do you value stock options? Restrited stock?
+
+## Spreading the word
+
+LinkedIn, Twitter, Tubmlr, Facebook, E-mail subscription, Reblog (links
+appreciated).
+
+## Quick Script: Golden Device
+
+Bring back the golden device feature but this time with arbitrary wave tables.
+Set failing cycles to 0, 1, invert or X. Support SCAN_TEMPLATE.
+
+## Licensing
+
+Begin with a rant about how licensing wastes a lot of time and encourages
+customers to invest in license optimization rather than readily adopt new
+features. How would I do this better.
+
+A tutorial on license optimization.
+
+How does licensing work in the real world for independant labs? OSATs?
+Tester-owning companies?
+
+## Rant: SmarTest Should be Free and Open
+
+Communist rant about owning the means of production and how can you expect
+people to invest their careers in your technology if you extort them for tools?
+Suggest giving free licenses to individual test engineers and sharing more
+source code and being clear about how currently shared source code such as,
+examples and templates, is licensed for sharing.
+
+And it should be distributed as a VM. And all the documentation and images
+should be on the website with minimal fuss?
+
+SmarTest used to be free (I think. It was for me anyway.). Then some brilliant
+person come up with the idea of nickle and diming. Test engineers have been
+getting older ever since.  This is eating your seed corn. Mmm, delecious seed
+corn. And to what end? A couple of bucks? Promoting your lousy training
+courses? Classifying and channeling your customers? Keeping your competitors in
+the dark? (They can easily check your shit out at an independent lab anytime
+they fell like it.  Duh. To their credit, they're not copying your bad ideas
+too much.) Marketing? (People will volunteer their information if you let
+them.) It doesn't seem worth it.
+
+A photo essay on the box.
+
+Don't get me started on the bugs that persist for decades.
+
+Given the stack of open-source technologies SmarTest is built upon, have you no
+shame whatsoever?
+
+Point out that I'm possibly over the line with what I've put on github already.
+Give a thourough reading of my Advantest license agreement.
+
+## Advantest Nees a Public Bug Tracker
+
+SmarTest is bad and you should feel bad. Ascii tools? Seriously?
+
+Don't want people to know SmarTest is full of bugs: HEY PEOPLE, SMARTEST IS
+FULL OF BUGS! BUGS THAT HANG AROUND FOR DECADES!
+
+(Insert graphic of someone with cotten in their ears or an osterich with its
+head in the ground.)
+
+Visibility fixes bugs. Writing robust code is hard. I have enormous sympathy
+for the fact. But listening is easy. I have no sympathy for willful ignorance.
+
+Please let me upload crash reports. (apport) Pretty please?
+
+Now that they know, wouldn't you like a transparent process where people can
+tell you about the bugs and track progress fixing them?
+
+## Advantest Should Write a Vector Converter
+
+Or buy one. How have you not?
+
+## The least you shoud know: RegEx Tutorial
+
+## Taking Vim to a Vector File
+
+* gzip support
+* binary data support
+
+## Feature request: Parsing Errors
+
+When loading a pattern master file, tell me which pattern failed loading, please.
+
+ISE:tmp/pattern-master-failed-loading.png
+
+## Feature request: Document ui report socket
+
+## Feature request: Document event datalog socket
+
+## Bug Report: Error Map Messes with Tester State
+
+## Bug Report: Error Map, etc, Sucks with MultiportAny
+
+## Bug Report: Align Display Gone from Vector Editor in 6.5.4
+
+## HOWTO: Use Old Blue Vector Editor in 6.5.4
+
+## Bug Report: Old Blue Vector Editor Hates DPS32
+
+Crash.
+
+ISE: tmp/old-blue-hates-dps32.txt
+
+## Fix pasting in Vim under RHEL5
+
+Middle-click pasting and vim paste registers don't work right under RHEL5.
+
+## HOWTO: Use image magick to quickly capture something on the display
+
+## Bug Report: Scan Vector Editing Goes from Bad to Nonexistant
+
+## Bug Report: RegEx for Testmethod name 
+
+## Vim: Make your command like behave like Vim
+
+set -o vi
+
+* search: /
+* move: hljk
+* find letter: f
+* jump words: b, w
+
+## Program bugs go to /var/opt/hp93000/soc/prog_bug_log
+
+Interesting session stuff goes to /var/opt/hp93000/soc/common/tmp
+
+* eclipse_sock_:1234 -- probably good for something "No such device or address" seems familiar
+* xoc_sessionmanager -- something to do with running multiple smarTest sessions and figuring which one this terminal has.
+* ApiNamingSvcLog
+
+/var/opt/hp93000/soc/common/tmp/93k.asdf/
+
+* ReportFile -- It's the UI report! Sweet!
+* DataCollection -- tail -f DataCollection | strings -- the binary datalog is this easy to trap -- owned by process /opt/hp93000/soc/pws/bin/ess
+  running /opt/hp93000/soc/pws/bin/ess -> bind: Address already in use. A fatal error was encountered in the ess (Event Stream Server) meaning datalogging is no longer possible "restart SmarTest and contact R&D ifthe problem persists." Contact R&D -- wish I could.
+* Many more temporary files to research. Use fuser, lsof to see who uses what
+
+
+## Bug Report: UserFlag corruption
+
+## Bug Report: Leaky plugins easy to destabilize system
+
+## Searching Mega / Trackers for SmarTest
+
+## Defeating flexLM and other "node locking" methods
+
+Also, time-based methods.
+
+## Loadboard design: Use DPS32 First
+
+## Protocol-Aware Testing
+
+## File Naming and Directory Structure
+
+## Next to My Tester
+
+* Power Strip
+* Multimeter
+* Spacious desk
+* Oscilloscope (200 MHz)
+* Ethernet (or a wifi AP on the desk)
+
+## Expressdata
+
+## Open Source Software
+
+* Octave -- desk calculator
+
+## Frequency Test
+
+Oh great. They made it worse. Now instead of using the error map you get to setup a vector variable. Also there's the PPTIA which might be the way to go.
+
+## Rant: Parameter Documentation in New Standard UTMs
+
+## Files
+
+* .technology
+* license
+
+## Rant: Licensing
+
+* Have to restart / reload to play with it
+* Stupid language
+    * Cutting individual pins out of ranges
+    * "Channel 10110 specified twice" -- why not just let me specify twice and take the last? So much simpler
+    * Why not just let me specify one feature
+* Assigned to pin number rather than flexibly to pin names
+* And why don't you tell me when changing device that the license/model mismatches. You wait to complain until I go to load my pin config you son of a bitch.
+* Why do I have to name exact hardware? Just name the minimum PS400 and don't fuck me if there happens to be PS3600. Every time I change testers I have to tune this shit.
+* Something you truly can't do offline.
+* Here's an idea: Why don't you generate a model file for me based on what's actually in the tester?
+
+Change device is fucking slow. I typed this whole article while waiting to change one device.
+
+DFPN - Digital I/O channel #11504 for pin 'SPI_CLK_O' has mismatch between model/license file and installed HW. Well, what's the fucking installed hardware?
+
+## Bug Report: pptia_tml.PptiaTest.Frequency Doesn't bother to Connect
+
+## Bug Report: pptia_tml.PptiaTest.Frequency ReportUI in MHz but Limit Value is in Hz which is confusing
+
+## Bug Report: Select Pattern list includes sub-patterns (per-port patterns) which I can't actually select
+
+## Bug Report: Can't enter a "Insert Floating Testsuite" without pass/fail branches
+
+But you can "Convert to Run Node". Just keep in mind that you won't even see
+the option in the right-click menu until you ctrl-clk the testsuite to select
+it along with it's empty pass/fail branches.
+
+## TODO
+
+* Github Antikc repo with submodules for other repos.
+* Review some vector converters
+
+## BYOT: VXI, PXI, AXIe -- Backplanes
+
+The tester industry has levels just like the PC industry. 
+
+## BYOT: ADATE207
+
+http://www.analog.com/en/other-products/automatic-test-equipment/adate207/products/product.html
+
+What's the replacement. Semiconductor industry is getting a bit secrative in
+its old age.
+
+Price: $73 ($18.25 per pin)
+Release date: circa 2007
+
+Compared to the specs of the PS400 digial pins, it's pretty-much identical.
+With x2 pin multiplexing, it sounds a lot like PS800.
+
+![Adate207 is not recommended for new designs](/images/adate207-not-recommended-for-new-designs.png)
+
+## Testfloors
+
+ISE, EAG, STS, GlobalTest, Qualcomm, Broadcomm, Rambus, nVidia
+
+Interesting how companies that run a testfloor for development -- or even
+production -- of their own product provide a much nicer working environment
+than the any of the independent labs. Things like big desks, debug equipment
+(oscilloscopes and the like) ready to go; no lab coat or booties required; you
+can even drink a Coke while developing your test program in Broadcomm's loading
+bay. Something about incentives.
+
+## BYOT: Analog Device's ATE Brochure
+
+This
+[Analog Devices marketing brochure for Automatic Test Equipment Solutions](http://www.analog.com/static/imported-files/overviews/ATE_BROCH_FINAL_02_08.pdf)
+actually surprised me. It gives a succinct overview of the components you need
+to build an ATE like the hp93k. There's a picture of a big VXI-rack tester with
+the Analog Devices log o emblazened on it. I guess I shouldn't be surprised
+that ADI, a major Integrated Device Manufacturer who supplies devices to the
+ATE market would build testers for their own use and maybe for some vertical
+integration purposes.
+
+## Vimwiki
+
+It's an excelent product plus, what I have in mine.
+
+## New JTAG for 2013: IEEE updates the spec
+
+Finally, standardizing the internal registers. (Why didn't you do this in the first place?)
+
+[JTAG Group homepage](http://grouper.ieee.org/groups/1149/1/)
+
+IEEE 1500, IEEE 1801, IEEE P1687
+
+## ntk.vim
+
+"Download/Upload" Wavetable, Equations, Specs etc as provided easily by firmware.
+
+Transform formats to Python / Lua
+
+## BYOT: Test Evolution
+
+[Test Evolution](http://www.testevolution.com/)
+occupies a middle layer in the tester industry. 
+
+## Things you should never do
+
+In the year 2000, proto-blogger and my hero Joel Spolsky posted what he
+considers to be his best ever blog post: 
+[Things You Should Never Do, Part I](http://www.joelonsoftware.com/articles/fog0000000069.html)
+
+> They did it by making the single worst strategic mistake that any software
+> company can make:
+>
+> They decided to rewrite the code from scratch.
+
+Joel was talking about Netscape but he may as well have been talking about the ATE group at Agilent.
+
+OpenTest is an international trademark registered to Agilent Technologies.
+Interestingly, I can't find a single other reference to the product that this
+valuable trademark represents.
+
+Maybe SmarTest isn't so bad after all. In fact, most of my complaints regard
+throwing away of perfectly servicable interfaces in favor of worse ones that
+languish for years. (Looking at you vector editor in smarTest 5.)
+
+## Let's Buy Some Used Test Equipment
+
+## Sweep Faster by Caching Timing Sets instead of SVLR
+
+## Mutiport -- Sequencing Groups and Phase Lock
+
+## Email service with
+
+Send posts or reruns daily to keep up engagement.
+
+Not sure how I feel abot all of the companies trying to engage me. I'm already
+getting daily drops from Mentor Graphics, JEDEC, Synopsis (but interestingly,
+not Advantest! Miss you Go/Semi.)
+
+## Arbitrary Limits
+
+Reading the "SmarTest character and number limits". Which limits are
+reasonable. (Hint, only ones that are absolutely enforced by hardware and for
+which no software hashing method could be used to work around.) Which should go
+away?
+
+## My Resume
+
+### Experience
+
+I've spent over a decade battling the hp93k semiconductor tester.
+
+Dealing with Firmware Commands, TestMethod C++ APIs and dozens of
+mini-languages. Using Python and Vimscript to work around misery and
+weaknesses. Using Open Source to fix problems.
+
+### Dream Job
+
+**CTO Advantest**
+
+I'd like a chance to finally fix the overarching problems with the platform.
+Meanwhile, I'm blogging, bug-fixing and working around them one-at-a-time.
+
+Other than that, if I could keep doing what I'm doing and not leave my house in
+Pleasanton, CA too much, I'd be happy.
+
+### References
+
+Who needs references when you have [a blog](http://antikc.com) and a
+[Github](https://github.com/gitfoxi)?
+
+### Contact
+
+Email me: m@antikc.com
+
+### Shameless Keywords
+
+hp93000, V93000, pinscale, SoC, ATE, Automated Test Equipment etc.
+
+## Using NOOP to comment your firmware command files
+
+But will SmarTest save them? Probably not.
+
+## Linking to ASCII tools binaries to borrow VECC
+
+libaldc
+
+The funny part is that compressing the link (transparently) might actually do
+some good in improving tester performance while using standard LZMA-type
+compression for optimizing storage.
+
+The bulk of the waiting for vector data to download is for scan patterns which
+aren't especially compressible. If a vector was compressible, you would do
+better to use the RPTV and other sequencer programming to compress its
+footprint in the tester memory. Because ALDC only compresses what's on disk and
+going over the fiber-optic cable, it doesn't save you any tester resources.
+Since it is slow, I would recommend not compression scan patterns -- it's a
+waste of time.
+
+This all seems dumb to me, but hindsight is 20/20 and I didn't show up for the
+meeting (my fault: I was in junior high).
+
+ALDC is mentioned twice in the documentation:
+
+* CTRL (PCI-E based) -- There's some diagnostic tests for the control board
+  which is apparently where the fiber optic interface enters the tester. This
+  must be where an ALDC chip designed to live in a tape drive has taken up
+  residence after hard disks were invented.
+
+* use_vecc -- paramater for the STIL reader telling it to compress patterns
+  using libadlc when converting.
+
+Research suggests there's two different ways compression can be done:
+
+* ALDC -- This is what I'm interested in as it seems to apply to everything
+  from C400 to PS3600.
+
+* LZW -- This is for the hp83k (I think)
+
+And the files do come out differently depending on whether you're targeting SM,
+VM or UMM memory, but I think that's due to differences in how the uncompressed
+data is padded and not in the compression algorithm itself.
+
+If I were designing a tester today I'd compress the link with some fancy
+hardware compression. That still makes sense. But for on-disk storage I would
+specify only standard compression. The LZMA you get with 'xz -1' is excellent
+and fast. This way, the CPU decompresses data, saving disk and network traffic,
+then the CIC card hardware compresses it using something like ALDC (probably
+something better available by now) and finally the tester's control board
+decompresses and processes any data flying across the wire (or fiber as the
+case may be, but fiber is not a choice I would make in 2013 -- better look at
+some PCIe or USB-based copper serdes).
+
+## How (not to) handle binary data over a socket
+
+BSON is an example of binary done right. JSON and YAML have good support in
+their own way. The key is escaping, out-of-band messages, not fixing record
+length.
+
+## Worst-Case Scenarious in API Design: Numbering timing and levels sets
+
+Very bad for modular development. Hampers cooperation and fosters crappy
+scripts to work around the numbering collisions (Everyone wants Equation Set
+0).
+
+Namespaces. Use names. I get there's a hardware limitation. Try harder to hide
+that from me.
+
+## Thanks for not stripping your binaries
+
+## Submissions Guide
+
+* No Cheerleading
+* Tell like it is
+* Name names (and numbers)
+
+## Modeling the tester as a big box of state
+
+Tester + Loadboard devices + SmarTest + My Code + DUT is a massive
+N-dimensional object flying through finite state space. How can programming
+models benefit from this view? (Other interesting factors are temperature, and
+whether all of the equipment is in good repair.)
+
+Unfortunately the states of these things are like a mountain of global variables that will influnce your tests in varius incomprehensible ways.
+
+Side-effect-free programming: How to keep one testsuite from fucking with
+another by changing the state of the tester. (Or allow it as the case may
+require.) Monads.
+
+DUTs introduce state. Sometimes reset doesn't mean what you think it means. In
+a bad implementation some registers and memories can start in a random state.
+The reset pin might preserve some values from before when it was asserted. This
+is done for someone's convenience. But for the test engineer it may be required
+to ground Vdd to make sure the damn thing fogets.
+
+A problem is that the tester encourages economy of resources through sharing.
+Otherwise, you'd want a unique state going into each test. Think about the
+limitations on timing sets. What if a prior test SVLRs a spec and doesn't set
+it back. How can you expect that (without any effort at all)?
+
+Operating systems give programs the illusion of more resources than they have
+and shield them from the underlying details. Operating systems protect programs
+from each other while allowing clear channels for communication (which may
+neverthess be source of instability and are best kept simple or avoided. Do we
+need a Virtual Tester Machine? While we're here, could we make it multi-user so
+several people could work on different aspects of the program at the same
+(sliced) time? How about, every testsuite can assume the tester starts in the
+same state (assuming a good DUT)? That would simplify integration a lot. At
+some point we have to stop worrying about test-time reduction and think about
+development-time reduction.
+
+Why do we accept that we should optimize license usage and test time and keep
+obsolete testers online forever because they're paid off. All at the expense of
+engineering? It's akin to premature optimization. Do you ever really earn your
+extra development time back? If you're too late to market then obviously not.
+But what about the test time burned sitting staring some over-complicated
+broken test program? I know this is convenient to Advantest's business model
+that you should be profligate with expensive resources that they sell. But I'm
+open to thinking about it. Markets are efficient and if we all use more testers
+then, the theory says that there will be more testers produced with each one
+costing incrementally less. That's the kind of thinking that helps everyone.
+
+This points to an opportunity for Advantest: Deliver a product that reduces TCO
+by being stable and robust though slower and less efficient and you'll sell
+more of them. Especially to the degree that Test Engineers are sometimes asked
+for their opinions on tester technology adoption, you may just have the wind to
+your back with such an offering.
+
+## conv_vector
+
+Changes memory type of vector
+
+Memory types: VM, SM, UMM
+Targets: F330 (83k), C200 (everything up to pinscale), MCU (not sure what this is)
+-compress -- compress the vectors. Or not!
+-toascii -- dump waveform indecies of a pin
+
+## LSB versus MSB-first in serial bitsrream
+
+Like endianness but for bits instead of bytes. A JTAG surprise.
+
+## ALDC is more trouble than it's worth
+
+Adaptive Lossless Data Compression (ALDC) is used by the hp93k to implement the
+binary compression format used in VECC vectors. The goal is twofold:
+
+1. Speed communication between the workstation and tester.
+2. Save disk space
+
+Sadly, HP dropped the ball implementing it. As it turns out, ALDC slows
+communication and eats more storage space than a more straightforward approach.
+Ouch.
+
+If ALDC had been properly implemented, you never would have heard of it. ALDC
+is optimized for hardware implementation. It is implemented by two matching
+chips, one on each end of the fiber-optic cable. In a straightfoward design,
+uncompressed data passes through the compression path on it's way into the
+cable and through the decompression path on it's way out. This is completely
+transparent to the rest of the system. Endpoints sending or receiving just sees
+the uncompressed data and perhaps notice that throughput is higher than the
+bitrate of the optical transciever allows for itself.
+
+But then someone got a bright idea: Since the bulk of communication between the
+workstation and tester is vector data, and since vectors take up a lot of space
+on disk, why not program the computer to compress the data at the time of
+vector conversion, store the data compressed (saving disk space) and simply
+implement the decompresser in the tester, while avoiding putting a matching
+compression chip on the workstations fiber-optic interface card (CiC, as they
+call it). Look at the savings:
+
+* Instead of two compression/decompression chips, now you just need one decompression chip.
+* Instead of using standard gzip to compress data on disk, now it's already comprressed.
+
+You get into trouble when you realize
+
+* Scan data is not compressible and represents the bulk of the data in the system.
+* The scarecest storage is not the hard drive in the computer it's the memory in the channel card. A useful compression system should be implemented at the pin.
+* ALDC, while optimized for hardware implementation is extremely awkward and slow for a general-purpose processor. And since this data must constantly be compressed and decompressed to make your ASCII tools and your vector editor work, you end up with a slow online development environment and a massively slow and memory-hungry offline development environment.
+
+## Idea: Compress VCD using per-pin time differentials and LZ4
+
+A fast and simple approach which allows random access.
+
+An excellent data compression blog from the author of LZ4: http://fastcompression.blogspot.com/
+
+Gets into topics like inlining, data alignment, streaming, hashing performance ...
+
+Fast longest-match search MMC: http://code.google.com/p/mmc/
+
+Boom Rants: http://cbloomrants.blogspot.com/ Charles Bloom 
+
+## Benchmarking vector compression time:
+
+Tool, user, real, size, size%
+v2b (no-compression), 144.6s, 147.2s, 808M, 100%
+v2b -C (compression), 149.8s, 152.2s 97M, 12%
+cat, 0.0s, 2.8s, 808M, 100%
+
+Fast compressors:
+aldc (v2b), 5.2s, ?s, 97M, 12%
+lzo, 1.3s, 1.7s, 104M, 12%
+snappy, 0.90s, 1.1s,  120M, 15%
+lz4 -c0, 0.98s, 1.3s, 141M, 17%
+
+Slow compressors:
+lz4 -c1, 120.1s, 121.3s, 62M, 8%
+xz -0, 26.3s, 26.5s, 49M, 6%
+xz -1, 28.9s, 29.2s, 46M, 6%
+xz -9, 501.4s, 503.2s, 36M, 4%
+gzip -1, 8.2s, 8.5s, 66M, 8%
+gzip -9, 447.0s, 448.1s, 42M, 5%
+
+I caught xz -9 using 673M of memory at some point! Gzip -9 used almost no
+memory. Is that because it's implemented in the kernel?
+
+Estimate 5.2s CPU time for v2b ALDC implementation. It's the worst speed of the
+fast compressors, but the best compression. There's no comparing the fast and
+slow compressors.
+
+I was pretty disapointed with `xz -0` which is advertized as faster than `gz
+-1` and better than `gz -9`. Does not deliver.
+
+Interesting that snappy dominates lz4 on both time and compression in this case.
+
+Other:
+
+lzjb node implementation was pretty slow and worst for compression.
+
+Conclusion: Snappy-c should make a good start for my ALDC implementation.
